@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <RadioButton fx:id="RadioInHouse" layoutX="135.0" layoutY="57.0" mnemonicParsing="false" onAction="#onActionInHouse" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RadioOutsourced" layoutX="273.0" layoutY="57.0" mnemonicParsing="false" onAction="#onActionOutsourced" text="Outsourced" toggleGroup="$toggle" />
+      <Label fx:id="MachineOrComp" layoutX="40.0" layoutY="307.0" text="Machine ID" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="31.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Text layoutX="43.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="43.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="43.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+      <Text layoutX="43.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+      <Text layoutX="43.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text layoutX="305.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="23.41650390625" />
+      <TextField fx:id="addPartID" editable="false" layoutX="112.0" layoutY="115.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="addPartName" layoutX="112.0" layoutY="150.0" />
+      <TextField fx:id="addPartInvent" layoutX="112.0" layoutY="188.0" />
+      <TextField fx:id="addPartPrice" layoutX="112.0" layoutY="225.0" />
+      <TextField fx:id="addPartMin" layoutX="112.0" layoutY="265.0" />
+      <TextField fx:id="addPartMax" layoutX="354.0" layoutY="265.0" />
+      <TextField fx:id="addPartMachineID" layoutX="131.0" layoutY="303.0" prefHeight="26.0" prefWidth="141.0" />
+      <Button fx:id="addPartSaveBut" layoutX="338.0" layoutY="360.0" mnemonicParsing="false" onAction="#AddPartSaveButtonPressed" text="Save" />
+      <Button fx:id="addPartCancelBut" layoutX="434.0" layoutY="360.0" mnemonicParsing="false" onAction="#AddPartCancelButtonPressed" text="Cancel" />
+   </children>
+</AnchorPane>
